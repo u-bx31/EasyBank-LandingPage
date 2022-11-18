@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+// Primary
+
+$DarkBlue: hsl(233, 26%, 24%);
+$LimeGreen: hsl(136, 65%, 51%);
+$BrightCyan: hsl(192, 70%, 51%);
+
+// Neutral
+
+$GrayishBlue: hsl(233, 8%, 62%);
+$LightGrayishBlue: hsl(220, 16%, 96%);
+$VeryLightGray: hsl(0, 0%, 98%);
+$White: hsl(0, 0%, 100%);
+* {
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 280px;
+  .req-btn {
+    color: $White;
+    background: linear-gradient(90deg, $LimeGreen 0%, $BrightCyan 100%);
+    border: 0;
+    padding: 11px 30px;
+    border-radius: 50px;
+  }
+
+  @media (min-width: 1400px) {
+    .container-xxl {
+      max-width: 1440px;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $LightGrayishBlue;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, $LimeGreen 0%, $BrightCyan 100%);
+    border-radius: 4px;
+  }
+}
+
+//nav section
+
+nav {
+  .nav-link {
+    color: $GrayishBlue;
+    border-bottom: 2px solid transparent;
+  }
+  .nav-link:hover {
+    border-bottom: 2px solid $LimeGreen;
+    transition: all 0.3s ease-in;
+  }
+}
+
+.offcanvas {
+  .offcanvas-body {
+    overflow: visible;
+  }
+}
+
+//main section
+main {
+  //hero section
+  .c-hero {
+    background-color: $VeryLightGray;
+    height: 36.5rem;
+  }
+  .text-section {
+    flex: 50%;
+    p {
+      color: $GrayishBlue;
+    }
+  }
+  .mockup-section {
+    flex: 70%;
+    width: 100%;
+    position: relative;
+    background: url("../images/bg-intro-desktop.svg") no-repeat;
+
+    background-size: 68rem;
+    background-position: 9% 130%;
+    overflow: hidden;
+    .c-img {
+      z-index: 9999;
+      position: static;
+      margin-left: 6rem;
+      margin-top: -8rem;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  main {
+    //hero section
+    .c-hero {
+      height: 100%;
+    }
+    .mockup-section {
+      background: url("../images/bg-intro-mobile.svg") no-repeat;
+      background-size: cover;
+      background-position: center center;
+      .c-img {
+        margin-left: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 280px) {
+  main {
+    //hero section
+    .mockup-section {
+      background-position: center center;
+      .c-img {
+        margin-top: -6rem;
+      }
+    }
+  }
+}

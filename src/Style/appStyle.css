@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+* {
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 280px;
+}
+body .req-btn {
+  color: hsl(0deg, 0%, 100%);
+  background: linear-gradient(90deg, hsl(136deg, 65%, 51%) 0%, hsl(192deg, 70%, 51%) 100%);
+  border: 0;
+  padding: 11px 30px;
+  border-radius: 50px;
+}
+@media (min-width: 1400px) {
+  body .container-xxl {
+    max-width: 1440px;
+  }
+}
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-track {
+  background: hsl(220deg, 16%, 96%);
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, hsl(136deg, 65%, 51%) 0%, hsl(192deg, 70%, 51%) 100%);
+  border-radius: 4px;
+}
+
+nav .nav-link {
+  color: hsl(233deg, 8%, 62%);
+  border-bottom: 2px solid transparent;
+}
+nav .nav-link:hover {
+  border-bottom: 2px solid hsl(136deg, 65%, 51%);
+  transition: all 0.3s ease-in;
+}
+
+.offcanvas .offcanvas-body {
+  overflow: visible;
+}
+
+main .c-hero {
+  background-color: hsl(0deg, 0%, 98%);
+  height: 36.5rem;
+}
+main .text-section {
+  flex: 50%;
+}
+main .text-section p {
+  color: hsl(233deg, 8%, 62%);
+}
+main .mockup-section {
+  flex: 70%;
+  width: 100%;
+  position: relative;
+  background: url("../images/bg-intro-desktop.svg") no-repeat;
+  background-size: 68rem;
+  background-position: 9% 130%;
+  overflow: hidden;
+}
+main .mockup-section .c-img {
+  z-index: 9999;
+  position: static;
+  margin-left: 6rem;
+  margin-top: -8rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 720px) {
+  main .c-hero {
+    height: 100%;
+  }
+  main .mockup-section {
+    background: url("../images/bg-intro-mobile.svg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  main .mockup-section .c-img {
+    margin-left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 280px) {
+  main .mockup-section {
+    background-position: center center;
+  }
+  main .mockup-section .c-img {
+    margin-top: -6rem;
+  }
+}/*# sourceMappingURL=appStyle.css.map */
