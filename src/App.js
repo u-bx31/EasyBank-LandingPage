@@ -1,5 +1,8 @@
 import NavBar from './component/NavBar'
 import Hero from './component/Hero'
+import Offre from './component/Offre';
+import Articles from './component/Articles';
+import Footer from './component/Footer';
 function App() {
   return (
     <div className="App">
@@ -8,7 +11,12 @@ function App() {
       </header>
       <main>
         <Hero />
+        <Offre/>
+        <Articles/>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

@@ -17,9 +17,22 @@ body .req-btn {
   padding: 11px 30px;
   border-radius: 50px;
 }
+body .req-btn:hover {
+  filter: brightness(115%) contrast(90%);
+}
+body h1,
+body h3,
+body h2,
+body h4,
+body h5 {
+  color: hsl(233deg, 26%, 24%);
+}
+body p {
+  color: hsl(233deg, 8%, 62%);
+}
 @media (min-width: 1400px) {
   body .container-xxl {
-    max-width: 1440px;
+    max-width: 1600px;
   }
 }
 body::-webkit-scrollbar {
@@ -31,6 +44,15 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: linear-gradient(0deg, hsl(136deg, 65%, 51%) 0%, hsl(192deg, 70%, 51%) 100%);
   border-radius: 4px;
+}
+body .bg-lgr {
+  background-color: hsl(0deg, 0%, 98%);
+}
+body .bg-grB {
+  background-color: hsl(220deg, 16%, 96%);
+}
+body .bg-db {
+  background-color: hsl(233deg, 26%, 24%);
 }
 
 nav .nav-link {
@@ -47,14 +69,10 @@ nav .nav-link:hover {
 }
 
 main .c-hero {
-  background-color: hsl(0deg, 0%, 98%);
   height: 36.5rem;
 }
 main .text-section {
   flex: 50%;
-}
-main .text-section p {
-  color: hsl(233deg, 8%, 62%);
 }
 main .mockup-section {
   flex: 70%;
@@ -73,8 +91,39 @@ main .mockup-section .c-img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main .c-articles .c-img {
+  width: 100%;
+  height: 12rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .c-articles p {
+  font-size: 15px;
+}
+main .c-articles button {
+  background: none;
+  border: none;
+}
+main .c-articles button :hover {
+  color: hsl(136deg, 65%, 51%);
+}
 
-@media (max-width: 720px) {
+footer .c-links button {
+  background: none;
+  border: none;
+  color: hsl(220deg, 16%, 96%);
+}
+footer .c-links button:hover {
+  color: hsl(136deg, 65%, 51%);
+}
+footer .c-links .s-icon {
+  height: 26px;
+}
+footer .c-links .s-icon:hover {
+  filter: invert(66%) sepia(29%) saturate(3164%) hue-rotate(72deg) brightness(130%) contrast(90%);
+}
+
+@media (max-width: 992px) {
   main .c-hero {
     height: 100%;
   }

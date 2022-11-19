@@ -16,25 +16,43 @@ $White: hsl(0, 0%, 100%);
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-width: 280px;
-  .req-btn {
+  .req-btn{
     color: $White;
     background: linear-gradient(90deg, $LimeGreen 0%, $BrightCyan 100%);
     border: 0;
     padding: 11px 30px;
     border-radius: 50px;
-  }
-
-  @media (min-width: 1400px) {
-    .container-xxl {
-      max-width: 1440px;
+    &:hover{
+      filter:  brightness(115%) contrast(90%);
     }
   }
 
+  h1,
+  h3,
+  h2,
+  h4,
+  h5 {
+    color: $DarkBlue;
+  }
+  p {
+    color: $GrayishBlue;
+  }
+
+  //New breakpoint
+  @media (min-width: 1400px) {
+    .container-xxl {
+      max-width: 1600px;
+
+    }
+  }
+
+  //scrool desgin
   &::-webkit-scrollbar {
     width: 6px;
   }
@@ -46,6 +64,16 @@ body {
   &::-webkit-scrollbar-thumb {
     background: linear-gradient(0deg, $LimeGreen 0%, $BrightCyan 100%);
     border-radius: 4px;
+  }
+
+  .bg-lgr {
+    background-color: $VeryLightGray;
+  }
+  .bg-grB {
+    background-color: $LightGrayishBlue;
+  }
+  .bg-db {
+    background-color: $DarkBlue;
   }
 }
 
@@ -72,21 +100,17 @@ nav {
 main {
   //hero section
   .c-hero {
-    background-color: $VeryLightGray;
     height: 36.5rem;
   }
   .text-section {
     flex: 50%;
-    p {
-      color: $GrayishBlue;
-    }
   }
   .mockup-section {
     flex: 70%;
     width: 100%;
     position: relative;
     background: url("../images/bg-intro-desktop.svg") no-repeat;
-
+    
     background-size: 68rem;
     background-position: 9% 130%;
     overflow: hidden;
@@ -98,9 +122,52 @@ main {
       object-fit: cover;
     }
   }
+  //article
+
+  .c-articles {
+    .c-img {
+      width: 100%;
+      height: 12rem;
+      object-fit: cover;
+    }
+    p {
+      font-size: 15px;
+    }
+    button{
+      background: none;
+      border: none;
+      :hover{
+        color:$LimeGreen;
+      }
+    }
+  }
+}
+//foter section
+footer {
+  .c-links{
+    button{
+      background: none;
+      border: none;
+      color: $LightGrayishBlue;
+      &:hover{
+        color: $LimeGreen;
+      }
+    }
+    .s-icon{
+      height: 26px;
+    }
+    .s-icon:hover{
+      filter: invert(66%) sepia(29%) saturate(3164%) hue-rotate(72deg) brightness(130%) contrast(90%);
+    }
+
+  }
+
 }
 
-@media (max-width: 720px) {
+
+
+
+@media (max-width: 992px) {
   main {
     //hero section
     .c-hero {
