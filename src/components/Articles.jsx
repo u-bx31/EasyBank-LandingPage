@@ -2,15 +2,40 @@ import image1 from '../images/image-confetti.jpg'
 import image2 from '../images/image-currency.jpg'
 import image3 from '../images/image-restaurant.jpg'
 import image4 from '../images/image-plane.jpg'
+import {motion} from 'framer-motion'
 
 const Articles = () => {
+    const articlesVariante = {
+        hidden:{
+            opacity:0
+        },
+        visible:{
+            opacity : 1,
+            transition :{
+                staggerChildren : .3
+            }
+        }
+    }
+    const articleVariante = {
+        hidden:{
+            opacity:0
+        },
+        visible:{
+            opacity : 1,
+            transition :{
+                duration :.7
+            }
+        }
+    }
     return (
         <section id='offre' className='bg-lgr'>
             <div className="container-fluid container-xxl p-0 ">
-                <div className="c-articles px-xl-5 px-0 pt-lg-5 p-3 mx-lg-5 mx-3  text-lg-start">
-                    <h1 className="pt-4 text-center text-lg-start">Latest Articles</h1>
-                    <div className="row row-cols-lg-4 row-cols-sm-2 row-cols-1 g-3  pt-5 pb-5">
-                        <div className="col pt-lg-0 pt-2">
+                <motion.div  variants={articlesVariante} initial="hidden" whileInView="visible" viewport={{once:true , amount : 0.2}} className="c-articles px-xl-5 px-0 pt-lg-5 p-3 mx-lg-5 mx-3  text-lg-start">
+                    <motion.h1 variants={articleVariante} className="pt-4 text-center text-lg-start">Latest Articles</motion.h1>
+
+                    <motion.div className="row row-cols-lg-4 row-cols-sm-2 row-cols-1 g-3  pt-5 pb-5">
+                        
+                        <motion.div className="col pt-lg-0 pt-2" variants={articleVariante}  >
                             <div className="bg-white h-100">
                                 <img src={image2} alt="" className='c-img rounded-top' />
                                 <div className="txt pt-4 px-4 pb-3">
@@ -23,8 +48,8 @@ const Articles = () => {
                                 </div>
                             </div>
 
-                        </div>
-                        <div className="col pt-lg-0 pt-2">
+                        </motion.div>
+                        <motion.div className="col pt-lg-0 pt-2" variants={articleVariante}>
                             <div className="bg-white h-100">
                                 <img src={image3} alt="" className='c-img rounded-top' />
                                 <div className="txt pt-4 px-4 pb-3">
@@ -37,8 +62,8 @@ const Articles = () => {
                                 </div>
                             </div>
 
-                        </div>
-                        <div className="col pt-lg-0 pt-2">
+                        </motion.div>
+                        <motion.div className="col pt-lg-0 pt-2" variants={articleVariante}>
                             <div className="bg-white h-100">
                                 <img src={image4} alt="" className='c-img rounded-top' />
                                 <div className="txt pt-4 px-4 pb-3">
@@ -51,8 +76,8 @@ const Articles = () => {
                                 </div>
                             </div>
 
-                        </div>
-                        <div className="col pt-lg-0 pt-2">
+                        </motion.div>
+                        <motion.div className="col pt-lg-0 pt-2" variants={articleVariante}>
                             <div className="bg-white h-100">
                                 <img src={image1} alt="" className='c-img rounded-top' />
                                 <div className="txt pt-4 px-4 pb-3">
@@ -65,9 +90,9 @@ const Articles = () => {
                                 </div>
                             </div>
 
-                        </div>
-                    </div>
-                </div>
+                        </motion.div>
+                    </motion.div>
+                </motion.div>
 
             </div>
         </section>

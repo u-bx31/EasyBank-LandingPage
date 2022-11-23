@@ -32,7 +32,7 @@ body {
       filter:  brightness(115%) contrast(90%);
     }
   }
-
+  
   h1,
   h3,
   h2,
@@ -51,7 +51,7 @@ body {
 
     }
   }
-
+  
   //scrool desgin
   &::-webkit-scrollbar {
     width: 6px;
@@ -82,10 +82,10 @@ body {
 nav {
   .nav-link {
     color: $GrayishBlue;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
   }
   .nav-link:hover {
-    border-bottom: 2px solid $LimeGreen;
+    border-bottom-color: $LimeGreen;
     transition: all 0.3s ease-in;
   }
 }
@@ -99,8 +99,10 @@ nav {
 //main section
 main {
   //hero section
+
   .c-hero {
     height: 36.5rem;
+
   }
   .text-section {
     flex: 50%;

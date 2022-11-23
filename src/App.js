@@ -1,8 +1,8 @@
-import NavBar from './component/NavBar'
-import Hero from './component/Hero'
-import Offre from './component/Offre';
-import Articles from './component/Articles';
-import Footer from './component/Footer';
+import NavBar from './components/NavBar'
+import Hero from './components/Hero'
+import Offre from './components/Offre';
+import Articles from './components/Articles';
+import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">

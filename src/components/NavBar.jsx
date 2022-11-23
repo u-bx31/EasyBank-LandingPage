@@ -1,7 +1,6 @@
 import { Offcanvas } from 'react-bootstrap';
-
+import Logo from '../images/logo';
 import Container from 'react-bootstrap/Container';
-import Logo from '../images/logo.svg';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar'
 
@@ -11,10 +10,10 @@ const NavBar = () => {
 
     return (
         <section id='nav'>
-            <Navbar key={expand} bg="white" expand={expand} className="py-lg-0 mx-lg-5 px-lg-5">
+            <Navbar key={expand} bg="white" expand={expand} className="py-lg-0 mx-lg-5 px-xl-5 px-lg-3 px-1">
                 <Container >
                     <Navbar.Brand href="#" >
-                        <img src={Logo} alt="" />
+                        <Logo fill={'#000'}/>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                     <Navbar.Offcanvas

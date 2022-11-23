@@ -57,10 +57,10 @@ body .bg-db {
 
 nav .nav-link {
   color: hsl(233deg, 8%, 62%);
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 nav .nav-link:hover {
-  border-bottom: 2px solid hsl(136deg, 65%, 51%);
+  border-bottom-color: hsl(136deg, 65%, 51%);
   transition: all 0.3s ease-in;
 }
 
