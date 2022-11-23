@@ -27,18 +27,18 @@ Users should be able to:
 ### Screenshot
 
 - Desktop Screen :
-![Desktop Screen]()
+![Desktop Screen](/src/images/ScreenShots/easybank_desktop.png)
 
 - Mobile Screen :
-![Mobile Screen]()
+![Mobile Screen](/src/images/ScreenShots/easybank_phone.png)
 
 - Ipad Screen :
-![Ipad Screen]()
+![Ipad Screen](/src/images/ScreenShots/easybank_ipad.png)
 
 
 ### Links
 
-- Solution URL: [LoopStudios](https://loopstudios031.netlify.app/)
+- Solution URL: [easyBank](https://easybank-31.netlify.app/)
 
 ## My process
 
